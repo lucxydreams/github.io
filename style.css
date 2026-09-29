@@ -149,7 +149,7 @@ section.block{padding:clamp(70px,10vw,120px) var(--pad);scroll-margin-top:40px}
 .card-frame .photo{aspect-ratio:1;border-radius:clamp(26px,3.5vw,46px);overflow:hidden;border:clamp(6px,.7vw,10px) solid var(--mauve);position:relative}
 .card-frame .photo img{width:100%;height:100%;object-fit:cover}
 .about-text .a-logo{width:min(360px,70%);height:auto;margin-bottom:14px}
-.zh-inline{font-family:var(--cjk);font-style:italic;color:var(--mauve)}
+.zh-inline{font-family:var(--cjk);font-style:normal}
 .frame-img{display:none}
 
 /* wide screens: use the Canva frame artwork itself */
@@ -319,11 +319,14 @@ section.proj-body{padding-top:clamp(36px,5vw,60px)}
 .video iframe{width:100%;height:100%;border:0;display:block}
 .gallery{columns:2;column-gap:clamp(14px,2vw,28px)}
 .g-item{break-inside:avoid;margin:0 0 clamp(14px,2vw,28px);cursor:zoom-in}
-.g-item .frame{aspect-ratio:4/3}
+.g-item .frame{aspect-ratio:4/3;border:0;border-radius:0}
 .g-item.tall .frame{aspect-ratio:4/5}
 .g-item .frame:has(img){aspect-ratio:auto}
 .g-item img{width:100%;height:auto}
-.g-item:hover .frame{transform:rotate(-.8deg);border-color:var(--forest)}
+.g-item:hover .frame{opacity:.9}
+/* project pages: no borders on the video or the enlarged photo either */
+[data-page="project"] .video{border:0;border-radius:0}
+[data-page="project"] .lb-media{border:0;border-radius:0}
 .proj-nav{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;border-top:2px dashed var(--line);margin-top:clamp(30px,4vw,50px);padding-top:22px}
 .proj-nav a{color:var(--forest)}
 .proj-nav a:hover{color:var(--mauve)}
@@ -353,3 +356,6 @@ section.proj-body{padding-top:clamp(36px,5vw,60px)}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* footer copyright line — normal case so the sentence reads easily */
+footer .copyright{text-transform:none;letter-spacing:.02em}
