@@ -149,7 +149,7 @@ section.block{padding:clamp(70px,10vw,120px) var(--pad);scroll-margin-top:40px}
 .card-frame .photo{aspect-ratio:1;border-radius:clamp(26px,3.5vw,46px);overflow:hidden;border:clamp(6px,.7vw,10px) solid var(--mauve);position:relative}
 .card-frame .photo img{width:100%;height:100%;object-fit:cover}
 .about-text .a-logo{width:min(360px,70%);height:auto;margin-bottom:14px}
-.zh-inline{font-family:var(--cjk);font-style:normal}
+.zh-inline{font-family:var(--cjk);font-style:normalcolor:var(--mauve)}
 .frame-img{display:none}
 
 /* wide screens: use the Canva frame artwork itself */
